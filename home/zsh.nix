@@ -37,7 +37,7 @@
 
     shellAliases = {
       cd = "z";
-      gc = "nix-collect-garbage --delete-old";
+      nix_gc = "nix-collect-garbage --delete-old";
       runzsh = "source $HOME/.zshrc";
       show_path = "echo $PATH | tr ':' '\n'";
 
@@ -53,7 +53,9 @@
 
     envExtra = ''
       export PATH=$PATH:$HOME/.local/bin
+      export PATH=$PATH:$HOME/.cargo/bin
     '';
+      #export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
 
     initExtra = ''
       bindkey '^e' end-of-line

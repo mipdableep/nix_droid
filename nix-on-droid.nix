@@ -15,16 +15,25 @@
     alejandra
     statix
 
-    # tools
+    #languages
     go
     rustup
+    gcc
+    gnumake
+    cmake
+    python313
+    nodejs_22 #for nvim
+
+    # tools
     mariadb
     just
     tmux
     openssh
     git
+    zsh
 
     # cli tools
+    neovim
     fd
     zoxide
     fzf
@@ -49,10 +58,6 @@
     litecli # sqlite
     yazi
   ];
-
-  programs.zsh.enable = true;
-  environment.pathsToLink = ["/usr/bin/zsh"];
-  environment.shells = [pkgs.zsh];
 
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
   environment.etcBackupExtension = ".bak";
